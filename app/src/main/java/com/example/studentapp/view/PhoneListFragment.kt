@@ -51,7 +51,7 @@ class PhoneListFragment : Fragment() {
     }
     fun observeViewModel(){
         viewModel.studentsLD.observe(viewLifecycleOwner, Observer {
-//            phoneListAdapter.updateStudentList((it))
+            phoneListAdapter.UpdatePhoneList((it))
         })
         viewModel.studentLoadErrorLD.observe(viewLifecycleOwner, Observer {
             if(it==true){

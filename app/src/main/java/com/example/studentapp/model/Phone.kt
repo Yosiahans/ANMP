@@ -8,5 +8,5 @@ data class Phone(
     val colors:List<String>?,
     val manufacturer:PhoneManufacturer?,
 )
-data class PhoneManufacturer(val name:String?,val country:String?){}
+data class PhoneManufacturer(val name:String?,val country:String?)
 

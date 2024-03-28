@@ -27,16 +27,16 @@ class PhoneListAdapter(val phoneList:ArrayList<Phone>):
     holder.binding.txtID.text = phoneList[position].id
         holder.binding.txtName.text = phoneList[position].model
         holder.binding.txtManu .text = phoneList[position].manufacturer?.name
-        holder.binding.btnDetail.setOnClickListener{
-            val action = StudentListFragmentDirections.actionStudentDetailFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
+//        holder.binding.btnDetail.setOnClickListener{
+//            val action = StudentListFragmentDirections.actionStudentDetailFragment()
+//            Navigation.findNavController(it).navigate(action)
+//        }
 
     }
-//    fun updateStudentList(newStudentList:ArrayList<Student>){
-//        phoneList.clear()
-//        phoneList.addAll(newStudentList)
-//        notifyDataSetChanged()
-//    }
+    fun UpdatePhoneList(newPhoneList:ArrayList<Phone>){
+        phoneList.clear()
+        phoneList.addAll(newPhoneList)
+        notifyDataSetChanged()
+    }
 }
 
