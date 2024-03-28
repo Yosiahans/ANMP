@@ -41,35 +41,35 @@ class PhoneListFragment : Fragment() {
 
         observeViewModel()
 
-        binding.refreshLayout.setOnRefreshListener {
-            binding.recView.visibility = View.GONE
-            binding .txtError.visibility = View.GONE
-            binding.progressLoad.visibility = View.VISIBLE
-            viewModel.refresh()
-            binding.refreshLayout.isRefreshing = false
-        }
+//        binding.refreshLayout.setOnRefreshListener {
+//            binding.recView.visibility = View.GONE
+//            binding .txtError.visibility = View.GONE
+//            binding.progressLoad.visibility = View.VISIBLE
+//            viewModel.refresh()
+//            binding.refreshLayout.isRefreshing = false
+//        }
     }
     fun observeViewModel(){
         viewModel.studentsLD.observe(viewLifecycleOwner, Observer {
             phoneListAdapter.UpdatePhoneList((it))
         })
-        viewModel.studentLoadErrorLD.observe(viewLifecycleOwner, Observer {
-            if(it==true){
-                binding.txtError?.visibility = View.VISIBLE
-            }
-            else{
-                binding.txtError?.visibility=View.GONE
-            }
-        })
-        viewModel.loadingLD.observe(viewLifecycleOwner,Observer{
-            if(it==true){
-                binding.recView.visibility = View.GONE
-            }
-            else{
-                binding.recView.visibility = View.VISIBLE
-                binding.progressLoad.visibility = View.GONE
-            }
-        })
+//        viewModel.studentLoadErrorLD.observe(viewLifecycleOwner, Observer {
+//            if(it==true){
+//                binding.txtError?.visibility = View.VISIBLE
+//            }
+//            else{
+//                binding.txtError?.visibility=View.GONE
+//            }
+//        })
+//        viewModel.loadingLD.observe(viewLifecycleOwner,Observer{
+//            if(it==true){
+//                binding.recView.visibility = View.GONE
+//            }
+//            else{
+//                binding.recView.visibility = View.VISIBLE
+//                binding.progressLoad.visibility = View.GONE
+//            }
+//        })
     }
 
 

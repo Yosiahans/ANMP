@@ -11,10 +11,11 @@ import com.example.studentapp.model.Student
 
 class PhoneListAdapter(val phoneList:ArrayList<Phone>):
     RecyclerView.Adapter<PhoneListAdapter.PhoneViewHolder>(){
-    class PhoneViewHolder(var binding:PhoneListItemBinding):RecyclerView.ViewHolder(binding.root)
+    class PhoneViewHolder(var binding:PhoneListItemBinding)
+        :RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneViewHolder {
-        var binding = PhoneListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = PhoneListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return PhoneViewHolder(binding)
     }
 

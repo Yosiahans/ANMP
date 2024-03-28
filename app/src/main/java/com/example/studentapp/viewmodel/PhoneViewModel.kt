@@ -41,7 +41,7 @@ class PhoneViewModel(application: Application):AndroidViewModel(application) {
             val result = Gson().fromJson<List<Phone>>(it, sType)
             studentsLD.value = result as ArrayList<Phone>?
             loadingLD.value=false
-            Log.d("showvoley",result.toString())
+            Log.d("showvoley",it)
 
 
         },{
