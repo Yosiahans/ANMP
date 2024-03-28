@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "year": 2023,
+    "colors": ["Black", "White", "Blue"],
+    "manufacturer": {
+      "name": "Apple Inc.",
+      "country": "United States"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=1"
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "model": "Galaxy S22",
+    "year": 2023,
+    "colors": ["Phantom Black", "Phantom White", "Phantom Green"],
+    "manufacturer": {
+      "name": "Samsung Electronics",
+      "country": "South Korea"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=2"
+  },
+  {
+    "id": 3,
+    "brand": "Google",
+    "model": "Pixel 7",
+    "year": 2023,
+    "colors": ["Just Black", "Sorta Sage", "Clearly White"],
+    "manufacturer": {
+      "name": "Google LLC",
+      "country": "United States"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=3"
+  },
+  {
+    "id": 4,
+    "brand": "OnePlus",
+    "model": "9 Pro",
+    "year": 2023,
+    "colors": ["Morning Mist", "Pine Green", "Stellar Black"],
+    "manufacturer": {
+      "name": "OnePlus Technology (Shenzhen) Co., Ltd.",
+      "country": "China"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=4"
+  },
+  {
+    "id": 5,
+    "brand": "Xiaomi",
+    "model": "Mi 12",
+    "year": 2023,
+    "colors": ["Obsidian Black", "Cosmic Gray", "Frost White"],
+    "manufacturer": {
+      "name": "Xiaomi Corporation",
+      "country": "China"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=5"
+  },
+  {
+    "id": 6,
+    "brand": "Huawei",
+    "model": "P50 Pro",
+    "year": 2023,
+    "colors": ["Golden Black", "Cocoa Gold", "Pearl White"],
+    "manufacturer": {
+      "name": "Huawei Technologies Co., Ltd.",
+      "country": "China"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=6"
+  },
+  {
+    "id": 7,
+    "brand": "Sony",
+    "model": "Xperia 5 III",
+    "year": 2023,
+    "colors": ["Black", "Green", "Pink"],
+    "manufacturer": {
+      "name": "Sony Corporation",
+      "country": "Japan"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=7"
+  },
+  {
+    "id": 8,
+    "brand": "Oppo",
+    "model": "Find X5 Pro",
+    "year": 2023,
+    "colors": ["Glazed Black", "White", "Glowing Bronze"],
+    "manufacturer": {
+      "name": "Oppo Electronics Corp.",
+      "country": "China"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=8"
+  },
+  {
+    "id": 9,
+    "brand": "Realme",
+    "model": "GT 2 Pro",
+    "year": 2023,
+    "colors": ["Magnetic Black", "Magnetic Blue", "Magnetic White"],
+    "manufacturer": {
+      "name": "Realme Mobile Telecommunications (India) Private Limited",
+      "country": "India"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=9"
+  },
+  {
+    "id": 10,
+    "brand": "Nokia",
+    "model": "X100 5G",
+    "year": 2023,
+    "colors": ["Charcoal", "Frost", "Ocean"],
+    "manufacturer": {
+      "name": "HMD Global Oy",
+      "country": "Finland"
+    },
+    "images": "https://loremflickr.com/320/240/handphone?lock=10"
+  }
+]
