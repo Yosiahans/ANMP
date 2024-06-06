@@ -40,8 +40,8 @@ class StudentListFragment : Fragment() {
 
         binding.refreshLayout.setOnRefreshListener {
             binding.recView.visibility = View.GONE
-            binding .txtError.visibility = View.GONE
-            binding.progressLoad.visibility = View.VISIBLE
+            binding.txtError.visibility = View.GONE
+            binding.progressBar.visibility = View.VISIBLE
             viewModel.refresh()
             binding.refreshLayout.isRefreshing = false
         }
@@ -61,10 +61,11 @@ class StudentListFragment : Fragment() {
         viewModel.loadingLD.observe(viewLifecycleOwner,Observer{
             if(it==true){
                 binding.recView.visibility = View.GONE
+                binding.progressBar.visibility = View.VISIBLE
             }
             else{
                 binding.recView.visibility = View.VISIBLE
-                binding.progressLoad.visibility = View.GONE
+                binding.progressBar.visibility = View.GONE
             }
         })
     }

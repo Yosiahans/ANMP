@@ -1,14 +1,19 @@
 package com.example.studentapp.view
 
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studentapp.databinding.StudentListItemBinding
 import com.example.studentapp.model.Student
+import com.squareup.picasso.Callback
+import com.squareup.picasso.Picasso
+import java.lang.Exception
 
 class StudentListAdapter(val studentList:ArrayList<Student>):
-    RecyclerView.Adapter<StudentListAdapter.StudentViewHolder>(){
+    RecyclerView.Adapter<StudentListAdapter.StudentViewHolder>(),ButtonDetailClickListener{
     class StudentViewHolder(var binding:StudentListItemBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
@@ -22,18 +27,44 @@ class StudentListAdapter(val studentList:ArrayList<Student>):
 
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
-    holder.binding.txtID.text = studentList[position].id
-        holder.binding.txtName.text = studentList[position].name
-        holder.binding.btnDetail.setOnClickListener{
-            val action = StudentListFragmentDirections.actionStudentDetailFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
-
+//    holder.binding.txtID.text = studentList[position].id
+//        holder.binding.txtName.text = studentList[position].name
+//        holder.binding.btnDetail.setOnClickListener{
+//            val action = StudentListFragmentDirections.actionStudentDetailFragment()
+//            Navigation.findNavController(it).navigate(action)
+//        }
+//        val picasso = Picasso.Builder(holder.itemView.context)
+//        picasso.listener { picasso, uri, exception ->
+//            exception.printStackTrace()
+//        }
+//        picasso.build().load(studentList[position].photoUrl).into(holder.binding.imageView,object :Callback{
+//            override fun onSuccess() {
+//                holder.binding.progressBar2.visibility = View.INVISIBLE
+//                holder.binding.imageView.visibility = View.VISIBLE
+//            }
+//
+//            override fun onError(e: Exception?) {
+//                Log.e("Picasso Error", e.toString())
+//            }
+//        })
+//
+    holder.binding.student = studentList[position]
+        holder.binding.listener = this
     }
+
+
+
+
     fun updateStudentList(newStudentList:ArrayList<Student>){
         studentList.clear()
         studentList.addAll(newStudentList)
         notifyDataSetChanged()
+    }
+
+    override fun onButtonDetailClick(v: View) {
+        val action = StudentListFragmentDirections.actionStudentDetailFragment(v.tag.toString())
+        Navigation.findNavController(v).navigate(action)
+
     }
 }
 
